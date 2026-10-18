@@ -96,17 +96,17 @@ dns:
       disabled: false
   proxy_nameservers:
   - MIX-DNS
-  hosts:
-    dns.google:
-    - 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
-    cloudflare-dns.com:
-    - 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9
-    dns.alidns.com:
-    - 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1
-    doh.pub:
-    - 1.12.12.12, 120.53.53.53
-    dot.pub:
-    - 1.12.12.12, 120.53.53.53
+#  hosts:
+#    dns.google:
+#    - 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
+#    cloudflare-dns.com:
+#    - 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9
+#    dns.alidns.com:
+#    - 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1
+#    doh.pub:
+#    - 1.12.12.12, 120.53.53.53
+#    dot.pub:
+#    - 1.12.12.12, 120.53.53.53
 #real_ip_domains:
 #- lancache.steamcontent.com
 #- '*.msftconnecttest.com'
@@ -252,10 +252,10 @@ scriptings:
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
-  #hostnames:
-    #includes:
-    #- '*.g.cn'
-    #- '*.google.cn'
+#  hostnames:
+#    includes:
+#    - '*.g.cn'
+#    - '*.google.cn'
 widgets:
 - name: Calendar
   script_name: Calendar
