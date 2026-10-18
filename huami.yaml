@@ -94,6 +94,8 @@ dns:
       match: '*'
       value: PROXY-DNS
       disabled: false
+  proxy_nameservers:
+  - MIX-DNS
   hosts:
     dns.google:
     - 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
@@ -105,24 +107,22 @@ dns:
     - 1.12.12.12, 120.53.53.53
     dot.pub:
     - 1.12.12.12, 120.53.53.53
-  proxy_nameservers:
-  - MIX-DNS
-real_ip_domains:
-- lancache.steamcontent.com
-- '*.msftconnecttest.com'
-- '*.msftncsi.com'
-- '*.srv.nintendo.net'
-- '*.stun.playstation.net'
-- xbox.*.microsoft.com
-- '*.xboxlive.com'
-- '*.logon.battlenet.com.cn'
-- '*.logon.battle.net'
-- stun.l.google.com
-- easy-login.10099.com.cn
-- '*-update.xoyocdn.com'
-- '*.prod.cloud.netflix.com'
-- appboot.netflix.com
-- '*-appboot.netflix.com'
+#real_ip_domains:
+#- lancache.steamcontent.com
+#- '*.msftconnecttest.com'
+#- '*.msftncsi.com'
+#- '*.srv.nintendo.net'
+#- '*.stun.playstation.net'
+#- xbox.*.microsoft.com
+#- '*.xboxlive.com'
+#- '*.logon.battlenet.com.cn'
+#- '*.logon.battle.net'
+#- stun.l.google.com
+#- easy-login.10099.com.cn
+#- '*-update.xoyocdn.com'
+#- '*.prod.cloud.netflix.com'
+#- appboot.netflix.com
+#- '*-appboot.netflix.com'
 policy_groups:
 - external:
     name: '1'
