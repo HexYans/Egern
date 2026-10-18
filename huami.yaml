@@ -74,6 +74,22 @@ dns:
       match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
       value: DIRECT-DNS
       disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Cloudflare/Cloudflare.yaml
+      value: PROXY-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module
+      value: PROXY-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://yfamilys.com/rule/ProxyMedia.list
+      value: PROXY-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Proxy/Proxy.yaml
+      value: PROXY-DNS
+      disabled: false
   - domain_wildcard:
       match: '*'
       value: PROXY-DNS
@@ -195,6 +211,22 @@ rules:
 - rule_set:
     match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
     policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Cloudflare/Cloudflare.yaml
+    policy: PROXY
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module
+    policy: PROXY
+    disabled: false
+- rule_set:
+    match: https://yfamilys.com/rule/ProxyMedia.list
+    policy: PROXY
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Proxy/Proxy.yaml
+    policy: PROXY
     disabled: false
 - protocol:
     match: stun
