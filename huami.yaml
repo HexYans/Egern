@@ -1,0 +1,290 @@
+ipv6: true
+http_port: 6152
+socks_port: 6153
+allow_external_connections: true
+vif_only: true
+block_quic: true
+close_connections_on_policy_change: true
+hide_vpn_icon: false
+geoip_db_url: https://git.io/GeoLite2-City.mmdb
+asn_db_url: https://git.io/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://connectivitycheck.gstatic.com/generate_204
+direct_latency_test_url: http://www.qq.com
+udp_latency_test_url: google.com@8.8.8.8
+compat_route: true
+include_all_networks: false
+include_apns: false
+dns:
+  bootstrap:
+  - system
+  - 223.5.5.5
+  - 223.6.6.6
+  - 119.28.28.28
+  - 119.29.29.29
+  - 180.76.76.76
+  - 2400:da00::6666
+  upstreams:
+    DIRECT-DNS:
+    - 180.76.76.76
+    - 2400:da00::6666
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    MIX-DNS:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://cloudflare-dns.com/dns-query
+    PROXY-DNS:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/China.list
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/ChinaCIDR.list
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Lan/Lan.yaml
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaIPsBGP/ChinaIPsBGP.yaml
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaMaxNoIP/ChinaMaxNoIP.yaml
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Direct/Direct.yaml
+      value: DIRECT-DNS
+      disabled: false
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
+      value: DIRECT-DNS
+      disabled: false
+  - domain_wildcard:
+      match: '*'
+      value: PROXY-DNS
+      disabled: false
+  hosts:
+    dns.google:
+    - 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
+    cloudflare-dns.com:
+    - 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9
+    dns.alidns.com:
+    - 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1
+    doh.pub:
+    - 1.12.12.12, 120.53.53.53
+    dot.pub:
+    - 1.12.12.12, 120.53.53.53
+  proxy_nameservers:
+  - MIX-DNS
+real_ip_domains:
+- lancache.steamcontent.com
+- '*.msftconnecttest.com'
+- '*.msftncsi.com'
+- '*.srv.nintendo.net'
+- '*.stun.playstation.net'
+- xbox.*.microsoft.com
+- '*.xboxlive.com'
+- '*.logon.battlenet.com.cn'
+- '*.logon.battle.net'
+- stun.l.google.com
+- easy-login.10099.com.cn
+- '*-update.xoyocdn.com'
+- '*.prod.cloud.netflix.com'
+- appboot.netflix.com
+- '*-appboot.netflix.com'
+policy_groups:
+- external:
+    name: '1'
+    type: select
+    urls:
+    - https://liangxin.xyz/api/v1/liangxin?OwO=f5018dc9a9dda874dbc8d42edb6f0808
+    icon: https://cdn.nodeimage.com/i/8vygBRNBN0vG9E2aaeShetE6NmQr58UZ.webp
+    hidden: false
+- select:
+    name: PROXY
+    policies:
+    - 美国
+    - 日本
+    - 新加坡
+    - 香港
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/clash-1.png
+    hidden: false
+- select:
+    name: 香港
+    policies:
+    - '1'
+    flatten: true
+    filter: 🇭🇰|Hong Kong|Hong|HK|HKG|香港
+    icon: https://iili.io/FaAI3Bt.png
+    hidden: false
+- select:
+    name: 新加坡
+    policies:
+    - '1'
+    flatten: true
+    filter: 🇸🇬|新加坡|Singapore|SG
+    icon: https://iili.io/FaRfFXn.png
+    hidden: false
+- select:
+    name: 日本
+    policies:
+    - '1'
+    flatten: true
+    filter: 🇯🇵|日本|Japan|JP
+    icon: https://iili.io/Fa5AnTb.png
+    hidden: false
+- select:
+    name: 美国
+    policies:
+    - '1'
+    flatten: true
+    filter: 🇺🇸|美国|United States|USA|US|States
+    icon: https://iili.io/FaAug7s.png
+    hidden: false
+rules:
+- rule_set:
+    match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/ChinaCIDR.list
+    policy: DIRECT
+    disabled: false
+- geoip:
+    match: CN
+    policy: DIRECT
+    no_resolve: false
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Lan/Lan.yaml
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaIPsBGP/ChinaIPsBGP.yaml
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaMaxNoIP/ChinaMaxNoIP.yaml
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/China.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Direct/Direct.yaml
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
+    policy: DIRECT
+    disabled: false
+- protocol:
+    match: stun
+    policy: PROXY
+    disabled: false
+- default:
+    policy: PROXY
+url_rewrites:
+- match: ^https?://(www\.)?(g|google)\.cn
+  location: https://www.google.com
+  status_code: 302
+scriptings:
+- generic:
+    name: Calendar
+    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/CN_Cal.JS
+- http_request:
+    name: IP Pure
+    match: ''
+    script_url: https://raw.githubusercontent.com/Bf0rest/Egern/refs/heads/main/Widget/IPPure-emoji.js
+    body_required: false
+    binary_body: false
+    disabled: true
+mitm:
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+    includes:
+    - '*.g.cn'
+    - '*.google.cn'
+widgets:
+- name: Calendar
+  script_name: Calendar
+- name: IP Pure
+  env:
+    GROUP: Direct
+modules:
+- url: huami
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+  enabled: true
+- name: Script Hub
+  url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
+  enabled: true
+- name: Sub Store
+  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
+  enabled: true
+- name: BoxJS
+  url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/555DY_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx
+  enabled: true
+- url: https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.sgmodule
+  enabled: true
+- url: https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.sgmodule
+  enabled: true
+- url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
+  enabled: true
+- url: https://github.com/Biliverse/Enhanced/releases/latest/download/Biliverse.Enhanced.sgmodule
+  enabled: true
+- url: https://github.com/Biliverse/Global/releases/latest/download/BiliBili.Global.sgmodule
+  enabled: true
+- url: https://github.com/Biliverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule
+  enabled: true
+- url: https://github.com/Biliverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/Nullwhy/Egern/main/Rewrite/NodeSeek.module
+  env:
+    ENABLE_CAPTURE: 'false'
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Reddit_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx
+  enabled: true
+default_subscription_group: PROXY
+default_proxy_group: PROXY
