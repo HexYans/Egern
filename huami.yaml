@@ -234,7 +234,7 @@ rules:
     disabled: false
 - default:
     policy: PROXY
-url_rewrites:
+#url_rewrites:
 #- match: ^https?://(www\.)?(g|google)\.cn
 #  location: https://www.google.com
 #  status_code: 302
@@ -252,8 +252,8 @@ scriptings:
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
-  hostnames:
-    includes:
+  #hostnames:
+    #includes:
     #- '*.g.cn'
     #- '*.google.cn'
 widgets:
