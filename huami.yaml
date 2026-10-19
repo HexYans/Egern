@@ -177,7 +177,7 @@ policy_groups:
 rules:
 - protocol:
     match: stun
-    policy: PROXY
+    policy: REJECT
     disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Cloudflare/Cloudflare.yaml
