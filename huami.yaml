@@ -175,6 +175,10 @@ policy_groups:
     icon: https://iili.io/FaAug7s.png
     hidden: false
 rules:
+- protocol:
+    match: stun
+    policy: PROXY
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Cloudflare/Cloudflare.yaml
     policy: PROXY
@@ -228,16 +232,12 @@ rules:
     match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
     policy: DIRECT
     disabled: false
-- protocol:
-    match: stun
-    policy: PROXY
-    disabled: false
 - default:
     policy: PROXY
-#url_rewrites:
-#- match: ^https?://(www\.)?(g|google)\.cn
-#  location: https://www.google.com
-#  status_code: 302
+url_rewrites:
+- match: ^https?://(www\.)?(g|google)\.cn
+  location: https://www.google.com
+  status_code: 302
 scriptings:
 - generic:
     name: Calendar
@@ -252,10 +252,10 @@ scriptings:
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
-#  hostnames:
-#    includes:
-#    - '*.g.cn'
-#    - '*.google.cn'
+  hostnames:
+    includes:
+    - '*.g.cn'
+    - '*.google.cn'
 widgets:
 - name: Calendar
   script_name: Calendar
