@@ -179,6 +179,13 @@ policy_groups:
     icon: https://iili.io/FaAug7s.png
     hidden: false
 rules:
+#防止Telegram转圈
+- ip_cidr:
+    match: 95.161.76.100/31
+    policy: REJECT
+    no_resolve: true
+    disabled: false
+#防止微信DNS污染
 - domain:
     match: dns.weixin.qq.com
     policy: DIRECT
@@ -187,6 +194,7 @@ rules:
     match: dns.weixin.qq.com.cn
     policy: DIRECT
     disabled: false
+#微信搜狐分流
 - domain_suffix:
     match: sohu.com
     policy: DIRECT
@@ -195,6 +203,7 @@ rules:
     match: deepseek.com
     policy: DIRECT
     disabled: false
+#EMBY分流
 - domain_suffix:
     match: p3mc4.mobaiemby.site
     policy: DIRECT
