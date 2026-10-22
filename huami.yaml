@@ -205,6 +205,10 @@ rules:
     disabled: false
 #EMBY分流
 - domain_suffix:
+    match: dmyg1.xiaoheixh.de
+    policy: DIRECT
+    disabled: false
+- domain_suffix:
     match: p3mc4.mobaiemby.site
     policy: DIRECT
     disabled: false
