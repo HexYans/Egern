@@ -1,5 +1,5 @@
 auto_update:
-  url: https://raw.githubusercontent.com/huamidev/Egern/refs/heads/main/huami.yaml
+  url: https://raw.githubusercontent.com/hexyans/Egern/refs/heads/main/huami.yaml
   interval: 86400
 ipv6: true
 http_port: 6152
