@@ -326,9 +326,7 @@ modules:
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
   enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/555DY_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx
+- url: https://raw.githubusercontent.com/HexYans/Scripts/refs/heads/main/Spotify.sgmodule
   enabled: true
 - url: https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.sgmodule
   enabled: true
