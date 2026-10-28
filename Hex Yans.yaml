@@ -328,9 +328,7 @@ modules:
   enabled: true
 - url: https://raw.githubusercontent.com/HexYans/Scripts/refs/heads/main/Spotify.sgmodule
   enabled: true
-- url: https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.sgmodule
-  enabled: true
-- url: https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.sgmodule
+- url: https://kelee.one/Tool/Loon/Lpx/YouTubeSubtitlesTranslation.lpx
   enabled: true
 - url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
   enabled: true
