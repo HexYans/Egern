@@ -309,8 +309,6 @@ widgets:
   env:
     GROUP: Direct
 modules:
-- url: huami
-  enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
   enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
