@@ -241,7 +241,7 @@ rules:
     match: https://magicrule.pages.dev/data/_shared/artifacts/China_rules_af44e64325d1842a.yaml
     policy: DIRECT
     disabled: false
-#========Proxy==========#
+#========Direct==========#
 - rule_set:
     match: https://magicrule.pages.dev/data/_shared/artifacts/Direct_rules_b5366edba520b4b0.yaml
     policy: DIRECT
