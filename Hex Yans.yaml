@@ -175,12 +175,6 @@ policy_groups:
     icon: https://iili.io/FaAug7s.png
     hidden: false
 rules:
-#防止Telegram转圈
-- ip_cidr:
-    match: 95.161.76.100/31
-    policy: REJECT
-    no_resolve: true
-    disabled: false
 #防止微信DNS污染
 - domain:
     match: dns.weixin.qq.com
@@ -221,63 +215,68 @@ rules:
     match: stun
     policy: REJECT
     disabled: false
+#==========去广告==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Cloudflare/Cloudflare.yaml
-    policy: PROXY
-    disabled: false
-- rule_set:
-    match: https://yfamilys.com/rule/ProxyMedia.list
-    policy: PROXY
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Proxy/Proxy.yaml
-    policy: PROXY
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/ChinaCIDR.list
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Advertising_rules_8953ff95a8384813.yaml
     policy: DIRECT
     disabled: false
+#==========GeoIP==========#
 - geoip:
     match: CN
     policy: DIRECT
     no_resolve: false
     disabled: false
+#==========LAN==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Lan/Lan.yaml
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Lan_rules_53dad82c5f61c57a.yaml
     policy: DIRECT
     disabled: false
+#==========ChinaIPs==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaIPsBGP/ChinaIPsBGP.yaml
+    match: https://magicrule.pages.dev/data/_shared/artifacts/ChinaIPs_rules_0d7c83e2e5505b81.yaml
     policy: DIRECT
     disabled: false
+#=========China=========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ChinaMaxNoIP/ChinaMaxNoIP.yaml
+    match: https://magicrule.pages.dev/data/_shared/artifacts/China_rules_af44e64325d1842a.yaml
     policy: DIRECT
     disabled: false
+#========Proxy==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Direct_rules_b5366edba520b4b0.yaml
     policy: DIRECT
     disabled: false
+#========Apple==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/China.list
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Apple_rules_3ae0440ce99a7de0.yaml
     policy: DIRECT
     disabled: false
+#=======Nvidia==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Direct/Direct.yaml
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Nvidia_rules_fcd765dff0e94153.yaml
     policy: DIRECT
     disabled: false
+#=======ByteDance==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Apple/Apple.yaml
+    match: https://magicrule.pages.dev/data/_shared/artifacts/ByteDance_rules_71f08788d98a5f0d.yaml
     policy: DIRECT
     disabled: false
+#==========Spotify==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/Nvidia/Nvidia.yaml
-    policy: DIRECT
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Spotify_rules_06730c5a0f376ce2.yaml
+    policy: PROXY
     disabled: false
+#==========YouTube==========#
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/EgernRules/X/Rules/ByteDance/ByteDance.yaml
-    policy: DIRECT
+    match: https://magicrule.pages.dev/data/_shared/artifacts/YouTube_rules_b85628599d1ab463.yaml
+    policy: PROXY
     disabled: false
+#==========CloudFlare==========#
+- rule_set:
+    match: https://magicrule.pages.dev/data/_shared/artifacts/Cloudflare_rules_e7e950e9fa0e7fe3.yaml
+    policy: PROXY
+    disabled: false
+#==========Default==========#
 - default:
     policy: PROXY
 url_rewrites:
