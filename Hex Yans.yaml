@@ -308,12 +308,6 @@ widgets:
   env:
     GROUP: Direct
 modules:
-- url: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
-  enabled: true
 - name: Script Hub
   url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
   enabled: true
@@ -339,27 +333,9 @@ modules:
   enabled: true
 - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
   enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
-  enabled: true
 - url: https://raw.githubusercontent.com/Nullwhy/Egern/main/Rewrite/NodeSeek.module
   env:
     ENABLE_CAPTURE: 'false'
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/Reddit_remove_ads.lpx
-  enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx
   enabled: true
 default_subscription_group: PROXY
 default_proxy_group: PROXY
