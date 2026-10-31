@@ -317,9 +317,9 @@ modules:
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/HexYans/Scripts/refs/heads/main/Spotify.sgmodule
+- url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/Spotify.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/HexYans/Scripts/refs/heads/main/YouTube.yaml
+- url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
   enabled: true
 - url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
   enabled: true
