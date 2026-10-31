@@ -318,7 +318,7 @@ modules:
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
   enabled: true
 - name: Spotify
-  url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/Spotify.lpx
+  url: https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
   enabled: true
 - url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
   enabled: true
