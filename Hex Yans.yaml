@@ -132,17 +132,6 @@ policy_groups:
     icon: https://cdn.nodeimage.com/i/8vygBRNBN0vG9E2aaeShetE6NmQr58UZ.webp
     hidden: false
 - select:
-    name: Spotify
-    policies:
-    - 美国
-    - 日本
-    - 新加坡
-    - 香港
-    - DIRECT
-    flatten: false
-    icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/clash-1.png
-    hidden: false
-- select:
     name: PROXY
     policies:
     - 美国
@@ -229,7 +218,7 @@ rules:
 #==========Spotify==========#
 - rule_set:
     match: https://magicrule.pages.dev/data/_shared/artifacts/Spotify_rules_06730c5a0f376ce2.yaml
-    policy: Spotify
+    policy: PROXY
     disabled: false
 #==========YouTube==========#
 - rule_set:
