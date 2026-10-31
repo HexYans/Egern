@@ -317,7 +317,7 @@ modules:
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/Spotify.sgmodule
+- url: https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/Spotify.lpx
   enabled: true
 - url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
   enabled: true
