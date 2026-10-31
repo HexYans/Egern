@@ -215,21 +215,6 @@ rules:
     match: stun
     policy: REJECT
     disabled: false
-#==========Spotify==========#
-- rule_set:
-    match: https://magicrule.pages.dev/data/_shared/artifacts/Spotify_rules_06730c5a0f376ce2.yaml
-    policy: PROXY
-    disabled: false
-#==========YouTube==========#
-- rule_set:
-    match: https://magicrule.pages.dev/data/_shared/artifacts/YouTube_rules_b85628599d1ab463.yaml
-    policy: PROXY
-    disabled: false
-#==========CloudFlare==========#
-- rule_set:
-    match: https://magicrule.pages.dev/data/_shared/artifacts/Cloudflare_rules_e7e950e9fa0e7fe3.yaml
-    policy: PROXY
-    disabled: false
 #==========去广告==========#
 - rule_set:
     match: https://magicrule.pages.dev/data/_shared/artifacts/Advertising_rules_8953ff95a8384813.yaml
