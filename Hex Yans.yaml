@@ -320,21 +320,26 @@ modules:
 - name: Spotify
   url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/Spotify.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
+- name: YouTube
+  url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
   enabled: true
-- url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
+- name: WeatherKit
+  url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
   enabled: true
-- url: https://github.com/Biliverse/Enhanced/releases/latest/download/Biliverse.Enhanced.sgmodule
+- name: Biliverse Enhanced
+  url: https://github.com/Biliverse/Enhanced/releases/latest/download/Biliverse.Enhanced.sgmodule
   enabled: true
-- url: https://github.com/Biliverse/Global/releases/latest/download/BiliBili.Global.sgmodule
+- name: Biliverse Global
+  url: https://github.com/Biliverse/Global/releases/latest/download/BiliBili.Global.sgmodule
   enabled: true
-- url: https://github.com/Biliverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule
+- name: Biliverse Redirect
+  url: https://github.com/Biliverse/Redirect/releases/latest/download/BiliBili.Redirect.sgmodule
   enabled: true
-- url: https://github.com/Biliverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule
+- name: Biliverse ADBlock
+  url: https://github.com/Biliverse/ADBlock/releases/latest/download/BiliBili.ADBlock.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
-  enabled: true
-- url: https://raw.githubusercontent.com/Nullwhy/Egern/main/Rewrite/NodeSeek.module
+- name: NodeSeek
+  url: https://raw.githubusercontent.com/Nullwhy/Egern/main/Rewrite/NodeSeek.module
   env:
     ENABLE_CAPTURE: 'false'
   enabled: true
