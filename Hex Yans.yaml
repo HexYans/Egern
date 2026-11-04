@@ -275,10 +275,7 @@ modules:
   url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
   enabled: true
 - name: Sub Store
-  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
-  enabled: true
-- name: BoxJS
-  url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Egern.yaml
   enabled: true
 - name: WeatherKit
   url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.sgmodule
