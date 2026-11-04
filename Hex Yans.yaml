@@ -265,6 +265,9 @@ modules:
 - name: HexYansRule
   url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/HexYansRule.yaml
   enabled: true
+- name: Spotify
+  url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/Spotify.yaml
+  enabled: true
 - name: Script Hub
   url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
   enabled: true
@@ -273,9 +276,6 @@ modules:
   enabled: true
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
-  enabled: true
-- name: Spotify
-  url: https://raw.githubusercontent.com/SIJULY/egern-radar/main/spotify.sgmodule
   enabled: true
 - name: YouTube
   url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
