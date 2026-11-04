@@ -17,7 +17,6 @@ udp_latency_test_url: google.com@8.8.8.8
 compat_route: true
 include_all_networks: false
 include_apns: false
-
 dns:
   bootstrap:
   - system
