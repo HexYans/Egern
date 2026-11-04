@@ -175,6 +175,55 @@ policy_groups:
     icon: https://iili.io/FaAug7s.png
     hidden: false
 rules:
+#禁止防诈上传
+- domain:
+    match: dw.wo.com.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: gjfzpt.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: fzapp.gjfzpt.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: fzapph5.gjfzpt.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: fzapp-test-tyy.gjfzpt.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: oss.gjfzpt.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: fzapp.chanct.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: fzapph5.chanct.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: frappe.chanct.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: oss.chanct.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: sz.gafz.chanct.cn
+    policy: REJECT
+    disabled: false
+- domain:
+    match: tingfeng.chanct.cn
+    policy: REJECT
+    disabled: false
 #防止微信DNS污染
 - domain:
     match: dns.weixin.qq.com
