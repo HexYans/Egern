@@ -257,47 +257,56 @@ rules:
     disabled: false
 #==========去广告==========#
 - rule_set:
+    name: Advertising
     match: https://magicrule.pages.dev/data/_shared/artifacts/Advertising_rules_8953ff95a8384813.yaml
     policy: DIRECT
     disabled: false
 #==========GeoIP==========#
 - geoip:
+    name: CN
     match: CN
     policy: DIRECT
     no_resolve: false
     disabled: false
 #==========LAN==========#
 - rule_set:
+    name: LAN
     match: https://magicrule.pages.dev/data/_shared/artifacts/Lan_rules_53dad82c5f61c57a.yaml
     policy: DIRECT
     disabled: false
 #==========ChinaIPs==========#
 - rule_set:
+    name: ChinaIPs
     match: https://magicrule.pages.dev/data/_shared/artifacts/ChinaIPs_rules_0d7c83e2e5505b81.yaml
     policy: DIRECT
     disabled: false
 #=========China=========#
 - rule_set:
+    name: China
     match: https://magicrule.pages.dev/data/_shared/artifacts/China_rules_af44e64325d1842a.yaml
     policy: DIRECT
     disabled: false
 #========Direct==========#
 - rule_set:
+    name: Direct
     match: https://magicrule.pages.dev/data/_shared/artifacts/Direct_rules_b5366edba520b4b0.yaml
     policy: DIRECT
     disabled: false
 #========Apple==========#
 - rule_set:
+    name: Apple
     match: https://magicrule.pages.dev/data/_shared/artifacts/Apple_rules_3ae0440ce99a7de0.yaml
     policy: DIRECT
     disabled: false
 #=======Nvidia==========#
 - rule_set:
+    name: Nvidia
     match: https://magicrule.pages.dev/data/_shared/artifacts/Nvidia_rules_fcd765dff0e94153.yaml
     policy: DIRECT
     disabled: false
 #=======ByteDance==========#
 - rule_set:
+    name: ByteDance
     match: https://magicrule.pages.dev/data/_shared/artifacts/ByteDance_rules_71f08788d98a5f0d.yaml
     policy: DIRECT
     disabled: false
