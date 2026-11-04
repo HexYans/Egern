@@ -271,9 +271,6 @@ modules:
 - name: YouTube
   url: https://raw.githubusercontent.com/HexYans/Modules/refs/heads/main/YouTube.yaml
   enabled: true
-- name: Script Hub
-  url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.surge.sgmodule
-  enabled: true
 - name: Sub Store
   url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Egern.yaml
   enabled: true
