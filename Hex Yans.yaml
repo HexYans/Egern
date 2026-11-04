@@ -106,22 +106,6 @@ dns:
     - 1.12.12.12, 120.53.53.53
     dot.pub:
     - 1.12.12.12, 120.53.53.53
-#real_ip_domains:
-#- lancache.steamcontent.com
-#- '*.msftconnecttest.com'
-#- '*.msftncsi.com'
-#- '*.srv.nintendo.net'
-#- '*.stun.playstation.net'
-#- xbox.*.microsoft.com
-#- '*.xboxlive.com'
-#- '*.logon.battlenet.com.cn'
-#- '*.logon.battle.net'
-#- stun.l.google.com
-#- easy-login.10099.com.cn
-#- '*-update.xoyocdn.com'
-#- '*.prod.cloud.netflix.com'
-#- appboot.netflix.com
-#- '*-appboot.netflix.com'
 policy_groups:
 - external:
     name: '1'
