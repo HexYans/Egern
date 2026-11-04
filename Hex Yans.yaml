@@ -175,7 +175,7 @@ policy_groups:
     icon: https://iili.io/FaAug7s.png
     hidden: false
 rules:
-#禁止防诈上传
+#==========禁止防诈上传==========#
 - domain:
     match: dw.wo.com.cn
     policy: REJECT
@@ -224,7 +224,7 @@ rules:
     match: tingfeng.chanct.cn
     policy: REJECT
     disabled: false
-#防止微信DNS污染
+#==========防止微信DNS污染==========#
 - domain:
     match: dns.weixin.qq.com
     policy: DIRECT
@@ -233,7 +233,7 @@ rules:
     match: dns.weixin.qq.com.cn
     policy: DIRECT
     disabled: false
-#EMBY分流
+#==========EMBY分流==========#
 - domain_suffix:
     match: dmyg1.xiaoheixh.de
     policy: DIRECT
