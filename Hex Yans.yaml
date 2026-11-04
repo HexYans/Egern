@@ -223,14 +223,7 @@ url_rewrites:
 scriptings:
 - generic:
     name: Calendar
-    script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/CN_Cal.JS
-- http_request:
-    name: IP Pure
-    match: ''
-    script_url: https://raw.githubusercontent.com/Bf0rest/Egern/refs/heads/main/Widget/IPPure-emoji.js
-    body_required: false
-    binary_body: false
-    disabled: true
+    script_url: https://raw.githubusercontent.com/HexYans/JavaScript/refs/heads/main/Calendar.js
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
